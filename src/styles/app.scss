@@ -1,0 +1,17 @@
+@import 'common/normalize';
+@import 'common/adaptive';
+@import 'common/fonts';
+
+/*переменные*/
+@import 'common/variables';
+
+/*общее*/ 
+@import 'common/common';
+
+/*компоненты*/
+@import 'components/header';
+@import 'components/footer';
+
+/*страницы*/ 
+@import 'pages/index-page';
+@import 'pages/block-inline';

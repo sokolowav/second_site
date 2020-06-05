@@ -1,0 +1,50 @@
+.footer {
+    background-color: $darkgrey;
+    &-container {
+      padding: 30px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+      @media screen and (max-width: $sw-l) {
+        padding: 25px 15px;
+      }
+      @media screen and (max-width: $sw-m) {
+        padding: 22.6px 15px;
+      }
+      @media screen and (max-width: $sw-s) {
+        padding: 20.3px 15px;
+      }
+      @media screen and (max-width: $sw-xs) {
+        padding: 18px 15px;
+      }
+    }
+    &-text-developer {
+      padding-left: 15px;
+    }
+    &-text-company, &-text-developer {
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;  
+      color: $white;
+      text-align: center;
+      @media screen and (max-width: $sw-l) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @media screen and (max-width: $sw-m) {
+        font-size: 14.5px;
+        line-height: 19px;
+      }
+      @media screen and (max-width: $sw-s) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @media screen and (max-width: $sw-xs) {
+        font-size: 13.5px;     
+        line-height: 17px;
+      }
+    }
+    
+  }

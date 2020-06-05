@@ -1,0 +1,31 @@
+/*Задаем шрифты странице*/ 
+.body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+/*Задаем параметры контейнеров (ширина, высота, отступы, позиционирование flex'ов)*/ 
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 15px;
+  &-center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+}
+
+/*Задаем центровку текста*/ 
+.text {
+  &-center {
+    text-align: center;
+  }
+}
+
