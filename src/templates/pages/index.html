@@ -3,502 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Ремонт под ключ</title>
   <link rel="stylesheet" href="styles/app.min.css">
 </head>
-<body class="body">
-  <div class="wrapper">
-    <svg style="display: none">
-      <symbol  x="0px" y="0px" viewBox="0 0 512 512" id="urban">
-          <path d="M504,496h-48V264h8c4.418,0,8-3.582,8-8v-48c0-4.418-3.582-8-8-8H320V8c0-4.418-3.582-8-8-8H168c-4.418,0-8,3.582-8,8v72
-            H48c-4.418,0-8,3.582-8,8v408H8c-4.418,0-8,3.582-8,8s3.582,8,8,8h496c4.418,0,8-3.582,8-8S508.418,496,504,496z M184,496h-24
-            h-40H80H56V96h24h40h40h24V496z M296,496h-96V88c0-4.418-3.582-8-8-8h-16V16h128v184h-16c-4.418,0-8,3.582-8,8v48
-            c0,4.418,3.582,8,8,8h8V496z M296,216h160v32H296V216z M440,496h-24h-40h-40h-24V264h128V496z"/>
-          <path d="M112,104v16c0,4.418,3.582,8,8,8s8-3.582,8-8v-16c0-4.418-3.582-8-8-8S112,99.582,112,104z"/>
-          <path d="M120,144c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C128,147.582,124.418,144,120,144z"/>
-          <path d="M120,208c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C128,211.582,124.418,208,120,208z"/>
-          <path d="M120,400c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C128,403.582,124.418,400,120,400z"/>
-          <path d="M120,336c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C128,339.582,124.418,336,120,336z"/>
-          <path d="M120,272c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C128,275.582,124.418,272,120,272z"/>
-          <path d="M128,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S128,492.418,128,488z"/>
-          <path d="M72,104v16c0,4.418,3.582,8,8,8s8-3.582,8-8v-16c0-4.418-3.582-8-8-8S72,99.582,72,104z"/>
-          <path d="M80,336c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C88,339.582,84.418,336,80,336z"/>
-          <path d="M80,272c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C88,275.582,84.418,272,80,272z"/>
-          <path d="M80,208c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C88,211.582,84.418,208,80,208z"/>
-          <path d="M80,400c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C88,403.582,84.418,400,80,400z"/>
-          <path d="M80,144c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C88,147.582,84.418,144,80,144z"/>
-          <path d="M88,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S88,492.418,88,488z"/>
-          <path d="M152,104v16c0,4.418,3.582,8,8,8s8-3.582,8-8v-16c0-4.418-3.582-8-8-8S152,99.582,152,104z"/>
-          <path d="M160,272c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C168,275.582,164.418,272,160,272z"/>
-          <path d="M160,144c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C168,147.582,164.418,144,160,144z"/>
-          <path d="M160,336c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C168,339.582,164.418,336,160,336z"/>
-          <path d="M160,208c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C168,211.582,164.418,208,160,208z"/>
-          <path d="M160,400c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C168,403.582,164.418,400,160,400z"/>
-          <path d="M168,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S168,492.418,168,488z"/>
-          <path d="M376,304c4.418,0,8-3.582,8-8v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16C368,300.418,371.582,304,376,304z"/>
-          <path d="M376,374.4c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C368,370.818,371.582,374.4,376,374.4z"/>
-          <path d="M376,444.8c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C368,441.218,371.582,444.8,376,444.8z"/>
-          <path d="M384,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S384,492.418,384,488z"/>
-          <path d="M416,304c4.418,0,8-3.582,8-8v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16C408,300.418,411.582,304,416,304z"/>
-          <path d="M416,444.8c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C408,441.218,411.582,444.8,416,444.8z"/>
-          <path d="M416,374.4c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C408,370.818,411.582,374.4,416,374.4z"/>
-          <path d="M424,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S424,492.418,424,488z"/>
-          <path d="M336,304c4.418,0,8-3.582,8-8v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16C328,300.418,331.582,304,336,304z"/>
-          <path d="M336,374.4c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C328,370.818,331.582,374.4,336,374.4z"/>
-          <path d="M336,444.8c4.418,0,8-3.582,8-8v-35.2c0-4.418-3.582-8-8-8s-8,3.582-8,8v35.2C328,441.218,331.582,444.8,336,444.8z"/>
-          <path d="M344,488v-16c0-4.418-3.582-8-8-8s-8,3.582-8,8v16c0,4.418,3.582,8,8,8S344,492.418,344,488z"/>
-          <path d="M264,24c-4.418,0-8,3.582-8,8v16c0,4.418,3.582,8,8,8s8-3.582,8-8V32C272,27.582,268.418,24,264,24z"/>
-          <path d="M264,264c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C272,267.582,268.418,264,264,264z"/>
-          <path d="M264,200c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C272,203.582,268.418,200,264,200z"/>
-          <path d="M264,328c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C272,331.582,268.418,328,264,328z"/>
-          <path d="M264,72c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8V80C272,75.582,268.418,72,264,72z"/>
-          <path d="M264,136c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C272,139.582,268.418,136,264,136z"/>
-          <path d="M264,392c-4.418,0-8,3.582-8,8v16c0,4.418,3.582,8,8,8s8-3.582,8-8v-16C272,395.582,268.418,392,264,392z"/>
-          <path d="M216,24c-4.418,0-8,3.582-8,8v16c0,4.418,3.582,8,8,8s8-3.582,8-8V32C224,27.582,220.418,24,216,24z"/>
-          <path d="M216,72c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8V80C224,75.582,220.418,72,216,72z"/>
-          <path d="M216,328c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C224,331.582,220.418,328,216,328z"/>
-          <path d="M216,264c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C224,267.582,220.418,264,216,264z"/>
-          <path d="M216,200c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C224,203.582,220.418,200,216,200z"/>
-          <path d="M216,136c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8s8-3.582,8-8v-32C224,139.582,220.418,136,216,136z"/>
-          <path d="M216,392c-4.418,0-8,3.582-8,8v16c0,4.418,3.582,8,8,8s8-3.582,8-8v-16C224,395.582,220.418,392,216,392z"/>
-      </symbol>
-    </svg>
+<body>
+  <div class="container">
+
 <!-- Start header -->
-    <header class="header">
-      <div class="container">
-        <div class="header-wrapper">
-          <div class="logo">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M54.0451 5.95494C50.1824 2.12446 45.0966 0 39.6566 0C34.2167 0 29.1309 2.12446 25.2682 5.95494C22.2747 8.9485 20.3111 12.7468 19.603 16.8348C19.5386 17.2532 19.4742 17.6717 19.442 18.0901C19.4099 18.5086 19.3777 18.927 19.3455 19.3455C19.3133 19.6674 19.3133 20.0215 19.3133 20.3433V23.1116V24.367V25.6223V40.7189H34.4099H35.6652H36.9206C36.9528 40.3648 36.9528 40.0429 36.9528 39.6888V36.9528H35.6974H23.0794V25.5901V23.1116V20.3755C23.0794 20.0215 23.0794 19.6996 23.1116 19.3455C23.1438 18.927 23.176 18.5086 23.2403 18.0901C23.3047 17.6717 23.3691 17.2532 23.4657 16.8348C24.1416 13.6803 25.7511 10.8476 27.9399 8.62661C30.9335 5.63305 35.0858 3.76609 39.6566 3.76609C48.7983 3.76609 56.2339 11.2017 56.2339 20.3433C56.2339 24.9142 54.3669 29.0665 51.3734 32.0601C49.1524 34.2811 46.3197 35.8584 43.1652 36.5343V36.8884V39.6567C43.1652 39.9142 43.1652 40.1395 43.1652 40.397C47.2532 39.6888 51.0515 37.7253 54.0451 34.7318C57.8755 30.9013 60 25.7833 60 20.3433C60 14.9034 57.8755 9.78541 54.0451 5.95494Z" fill="#F7654A"/>
-              <path d="M23.0794 23.0794H24.3348H25.5901H36.9528V34.442V35.6974V36.9528V39.6888C36.9528 40.0429 36.9528 40.3648 36.9206 40.7189C36.8884 41.1373 36.8562 41.5558 36.7919 41.9742C36.7275 42.3927 36.6631 42.8111 36.5665 43.2296C35.8906 46.3841 34.2811 49.2167 32.0923 51.4378C29.0987 54.4313 24.9464 56.2983 20.3755 56.2983C11.2339 56.2983 3.79828 48.8626 3.79828 39.721C3.79828 35.1502 5.66524 30.9978 8.6588 28.0043C10.8798 25.7833 13.7124 24.206 16.867 23.53V20.4077C16.867 20.1502 16.867 19.9249 16.867 19.6674C12.779 20.3755 8.98069 22.339 5.98713 25.3326C2.12446 29.0987 0 34.2167 0 39.6566C0 45.0966 2.12446 50.1824 5.95494 54.0451C9.78541 57.8755 14.9034 60 20.3433 60C25.7833 60 30.8691 57.8755 34.7318 54.0451C38.3369 50.4399 40.4292 45.7081 40.6545 40.6545C40.6545 40.4936 40.6545 40.3326 40.6867 40.1717C40.6867 40.0751 40.6867 40.0107 40.6867 39.9142C40.6867 39.8176 40.6867 39.7532 40.6867 39.6566V36.8884V19.3133H25.5901H24.3348H23.0794C23.0472 19.6674 23.0472 19.9893 23.0472 20.3433L23.0794 23.0794Z" fill="#F7654A"/>
-            </svg>
-          </div>
-          <div class="humburger-wrapper">
-            <div class="menu-wrapper menu-wrapper--desktop">
-              <ul class="menu">
-                <li class="menu__item"><a href="#projects">Проекты</a></li>
-                <li class="menu__item"><a href="#activities">Деятельность</a></li>
-                <li class="menu__item"><a href="#questions">Вопросы</a></li>
-                <li class="menu__item"><a href="#partners">Партнеры</a></li>
-                <li class="menu__item"><a href="#contacts">Контакты</a></li>
-              </ul>  
+    <div class="header">
+      <header class="wrapper header__wrapper">
+        <div class="header__logo">
+          <img src="../../images/logo.jpg" alt="Логотип">
+        </div>
+        <div class="header__info info">
+          <div class="info__element">
+            <div>
+              <svg height="25" viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fedc63" d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm121.75 388.414062c-4.160156 4.160157-9.621094 6.253907-15.082031 6.253907-5.460938 0-10.925781-2.09375-15.082031-6.253907l-106.667969-106.664062c-4.011719-3.988281-6.25-9.410156-6.25-15.082031v-138.667969c0-11.796875 9.554687-21.332031 21.332031-21.332031s21.332031 9.535156 21.332031 21.332031v129.835938l100.417969 100.414062c8.339844 8.34375 8.339844 21.824219 0 30.164062zm0 0"/>
+              </svg>
             </div>
-            <div class="humburger">
-              <div class="humburger__line"></div>
-              <div class="humburger__line"></div>
-              <div class="humburger__line"></div>
+            <div class="element__text">
+              <span class="info__big-text">часы работы:</span><br>
+              <span class="info__small-text">пн-пт 9.00-18.00</span>
+            </div>
+          </div>
+          <div class="info__element">
+            <div class="element__pic">
+              <svg  fill="#ffffff" height="15" viewBox="0 0 479.058 479.058" width="15" xmlns="http://www.w3.org/2000/svg">
+                <path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"/>
+              </svg>
+            </div>
+            <div class="element__text">
+              <span class="info__big-text">e-mail</span><br>
+              <a href="#" class="info__small-text">promo@studiosplav.ru</a>
+            </div>
+          </div>
+          <div class="info__element">
+            <div class="element__pic">
+              <svg height="15" width="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+                <path fill="#ffffff" d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594
+                    c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448
+                    c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812
+                    C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z
+                     M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479
+                    h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427
+                    c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979
+                    l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479
+                    V353.188z"/>
+              </svg>
+            </div>
+            <div class="element__text">
+              <span class="info__big-text">телефон</span><br>
+              <span class="info__small-text">+7(000)000-0000</span>
             </div>
           </div>
         </div>
-      </div>
-      <div class="menu-wrapper menu-wrapper--mobile">
-        <ul class="menu">
-          <li class="menu__item"><a href="#projects">Проекты</a></li>
-          <li class="menu__item"><a href="#activities">Деятельность</a></li>
-          <li class="menu__item"><a href="#questions">Вопросы</a></li>
-          <li class="menu__item"><a href="#partners">Партнеры</a></li>
-          <li class="menu__item"><a href="#contacts">Контакты</a></li>
-        </ul>  
-      </div>
-    </header>
+        <div class="button header__button">
+          <a href="#">заказать звонок</a>
+        </div>        
+      </header>
+    </div>
 <!-- /End header -->
 
-<!-- Start screen-first -->
-    <section class="screen-first">
-      <div class="container">
-        <div class="container-center">
-          <div class="screen-first__text">  
-            <h1 class="text-center">
-              реализуем крупнейшие <br/> проекты в россии
-            </h1>
-            <div class="signature text-center">
-              стадионы, газопроводы, мосты, дамбы
-            </div>
-          </div>
-        </div>
-      </div>
-<!-- /End screen-first -->
-
-<!-- Start middle-block -->
-      <div class="middle-block container">
-        <div class="flex-item">
-          <div class="flex-item-number">
-            26
-          </div>
-          <div class="flex-item-bigtext">
-            лет
-          </div>
-          <div class="flex-item-smalltext">
-            на рынке
-          </div>
-        </div>  
-        
-        <div class="flex-item">
-          <div class="flex-item-number">
-            26
-          </div>
-          <div class="flex-item-bigtext">
-            лет
-          </div>
-          <div class="flex-item-smalltext">
-            на рынке
-          </div>
-        </div>
-
-        <div class="flex-item">
-            <div class="flex-item-number">
-              26
-            </div>
-            <div class="flex-item-bigtext">
-              лет
-            </div>
-            <div class="flex-item-smalltext">
-              на рынке
-            </div>  
-        </div>
-        <div class="flex-item">
-          <div class="flex-item-number">
-            26
-          </div>
-          <div class="flex-item-bigtext">
-            лет
-          </div>
-          <div class="flex-item-smalltext">
-            на рынке
-          </div>
-        </div>
-      </div>      
-    </section>
-<!-- /End middle-block -->
-
-<!-- Start screen-second -->
-    <section class="screen-second" id="projects">
-      <div class="container">
-        <div class="screen-second-margin">
-            <div class="screen-second_header">
-                наши самые большие проекты 
-            </div>
-            <div class="projects">
-                <div class="projects__item">
-                    <img class="item__img" src="images/Rectangle 3.png" alt="Газпром Арена">
-                    <div class="item__header">Газпром Арена</div>
-                    <div class="item__description">
-                      Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для развития на следующие десятилетия. Мы очень рады данному факту.
-                    </div>
-                </div>
-                <div class="projects__item">
-                    <img class="item__img" src="images/Rectangle 3.png" alt="Газпром Арена">
-                    <div class="item__header">Газпром Арена</div>
-                    <div class="item__description">
-                      Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для развития на следующие десятилетия. Мы очень рады данному факту.
-                    </div>
-                </div>
-                <div class="projects__item">
-                    <img class="item__img" src="images/Rectangle 3.png" alt="Газпром Арена">
-                    <div class="item__header">Газпром Арена</div>
-                    <div class="item__description">
-                      Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной точкой для развития на следующие десятилетия. Мы очень рады данному факту.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-<!-- /End screen-second --> 
-
-<!-- Start call to action block --> 
-    <div class="maroon-block">
-      <div class="container call-to-action">
-        <div class="call-to-action-text">
-          <div class="call-to-action-text__first-string">самые умные проекты</div>
-          <div class="call-to-action-text__second-string">реализуем самые смелые проекты в россии!</div>
-        </div>
-        <button class="call-to-action-button">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <path d="M10.688,95.156C80.958,154.667,204.26,259.365,240.5,292.01c4.865,4.406,10.083,6.646,15.5,6.646
-              c5.406,0,10.615-2.219,15.469-6.604c36.271-32.677,159.573-137.385,229.844-196.896c4.375-3.698,5.042-10.198,1.5-14.719
-              C494.625,69.99,482.417,64,469.333,64H42.667c-13.083,0-25.292,5.99-33.479,16.438C5.646,84.958,6.313,91.458,10.688,95.156z"/>
-
-            <path d="M505.813,127.406c-3.781-1.76-8.229-1.146-11.375,1.542C416.51,195.01,317.052,279.688,285.76,307.885
-              c-17.563,15.854-41.938,15.854-59.542-0.021c-33.354-30.052-145.042-125-208.656-178.917c-3.167-2.688-7.625-3.281-11.375-1.542
-              C2.417,129.156,0,132.927,0,137.083v268.25C0,428.865,19.135,448,42.667,448h426.667C492.865,448,512,428.865,512,405.333
-              v-268.25C512,132.927,509.583,129.146,505.813,127.406z"/>
-          </svg>
-          <span>ваш запрос</span>
-        </button>
-      </div>
-    </div>
-<!-- /End call to action block -->
-
-<!-- Start screen-third -->
-    <section class="screen-third" id="activities">
-      <div class="container screen-third-container">
-        <div class="screen-third-text">
-          чем мы занимаемся?
-        </div>
-        <div class="activities">
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-          <div class="activities-item">
-            <svg>
-              <use xlink:href="#urban"></use>
-            </svg>            
-            <div class="activities-item__text">
-              строительство <br> офисных зданий
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>  
-<!-- /End screen-third -->
-    
-<!-- Start screen-fourth -->
-    <section class="screen-fourth">
-     <div class="portfolio">
-       <div class="portfolio-img-wrapper">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-         <img src="images/Rectangle 4.png" alt="portfolio image">
-       </div>       
-     </div>     
-    </section>
-<!-- /End screen-fourth -->
-
-<!-- Start screen-fifth -->
-  <section class="section screen-fifth" id="questions">
-    <div class="container screen-fifth-container">
-      <div class="section__header">ОТВЕТЫ НА ВОПРОСЫ</div>
-      <div class="accordion-items">
-        <div class="accordion-item">
-          <div class="accordion-item__header">
-            работаете ли вы по 249 ФЗ?
-          </div>
-          <div class="accordion-item__content">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item__header">
-            работаете ли вы по 249 ФЗ?
-          </div>
-          <div class="accordion-item__content">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item__header">
-            работаете ли вы по 249 ФЗ?
-          </div>
-          <div class="accordion-item__content">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-item__header">
-            работаете ли вы по 249 ФЗ?
-          </div>
-          <div class="accordion-item__content">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
-          </div>
-        </div>
-      </div> 
-    </div>
-  </section> 
-<!-- /End screen-fifth -->
-
-<!-- Start partners block -->
-    <div class="partners-block" id="partners">
-      <div class="container">
-        <div class="partners-block-text">наши партнеры</div>
-        <div class="partners-block-items">
-          <img class="partners-block-items_element" src="images/partner.png" alt="partner">
-          <img class="partners-block-items_element" src="images/partner.png" alt="partner">
-          <img class="partners-block-items_element" src="images/partner.png" alt="partner">
-          <img class="partners-block-items_element" src="images/partner.png" alt="partner">
-          <img class="partners-block-items_element" src="images/partner.png" alt="partner">
-        </div>
-      </div>      
-    </div>
-<!-- /End partners block -->
-
-<!-- Start screen-sixth -->
-    <section class="screen-sixth">
-      <div class="container screen-sixth-container">
-        <div class="screen-sixth-text">отзывы о работе с нами</div>
-        <div class="screen-sixth-items">
-          <div class="screen-sixth-items-element">
-            <div class="screen-sixth-items-element-quote">
-              <span>“</span>
-              <p>
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.
-              </p>
-            </div>
-            <div class="screen-sixth-items-element-author">
-              Иванов Иван, <span>ООО “Газпром-Арена”</span> 
-            </div>
-          </div>
-          <div class="screen-sixth-items-element">
-            <div class="screen-sixth-items-element-quote">
-              <span>“</span>
-              <p>
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.
-              </p>
-            </div>
-            <div class="screen-sixth-items-element-author">
-              Иванов Иван, <span>ООО “Газпром-Арена”</span> 
-            </div>
-          </div>
-          <div class="screen-sixth-items-element">
-            <div class="screen-sixth-items-element-quote">
-              <span>“</span>
-              <p>
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.
-              </p>
-            </div>
-            <div class="screen-sixth-items-element-author">
-              Иванов Иван, <span>ООО “Газпром-Арена”</span> 
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> 
-<!-- /End screen-sixth -->
-
-<!-- Start call to action block --> 
-    <div class="maroon-block">
-      <div class="container call-to-action">
-        <div class="call-to-action-text">
-          <div class="call-to-action-text__first-string">хотите с нами работать?</div>
-          <div class="call-to-action-text__second-string call-to-action-text__second-string--text-left">оставьте завку и мы свяжемся с вами!</div>
-        </div>
-        <button class="call-to-action-button">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <path d="M10.688,95.156C80.958,154.667,204.26,259.365,240.5,292.01c4.865,4.406,10.083,6.646,15.5,6.646
-              c5.406,0,10.615-2.219,15.469-6.604c36.271-32.677,159.573-137.385,229.844-196.896c4.375-3.698,5.042-10.198,1.5-14.719
-              C494.625,69.99,482.417,64,469.333,64H42.667c-13.083,0-25.292,5.99-33.479,16.438C5.646,84.958,6.313,91.458,10.688,95.156z"/>
-
-            <path d="M505.813,127.406c-3.781-1.76-8.229-1.146-11.375,1.542C416.51,195.01,317.052,279.688,285.76,307.885
-              c-17.563,15.854-41.938,15.854-59.542-0.021c-33.354-30.052-145.042-125-208.656-178.917c-3.167-2.688-7.625-3.281-11.375-1.542
-              C2.417,129.156,0,132.927,0,137.083v268.25C0,428.865,19.135,448,42.667,448h426.667C492.865,448,512,428.865,512,405.333
-              v-268.25C512,132.927,509.583,129.146,505.813,127.406z"/>
-          </svg>
-          <span>ваш запрос</span>
-        </button>
-      </div>
-    </div>
-<!-- /End call to action block -->
-
-<!-- Start screen-seventh -->
-    <section class="screen-seven" id="contacts">
-      <div class="container screen-seven-container">
-        <div class="screen-seven-header">контакты</div>
-        <div class="screen-seven-items">
-          <div class="screen-seven-items-element">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-              <path fill="#F7654A" d="M255.998,0C155.086,0,72.988,82.098,72.988,183.01c0,41.433,29.079,107.172,86.431,195.392
-                c41.902,64.455,84.401,118.228,84.826,118.763l11.754,14.834l11.754-14.834c0.425-0.536,42.924-54.308,84.826-118.763
-                c57.351-88.219,86.431-153.959,86.431-195.392C439.009,82.098,356.91,0,255.998,0z M255.997,463.408
-                C204.369,395.8,102.98,249.337,102.98,183.01c0-84.374,68.644-153.018,153.018-153.018S409.017,98.636,409.017,183.01
-                C409.017,249.303,307.626,395.787,255.997,463.408z"/>
-              <path fill="#F7654A" d="M255.998,71.981c-58.984,0-106.971,47.987-106.971,106.971c0,58.984,47.987,106.971,106.971,106.971
-                  c58.984,0,106.971-47.987,106.971-106.971C362.97,119.968,314.983,71.981,255.998,71.981z M255.998,255.932
-                  c-42.447,0-76.979-34.533-76.979-76.979s34.533-76.979,76.979-76.979c42.447,0,76.979,34.533,76.979,76.979
-                  S298.445,255.932,255.998,255.932z"/>
-            </svg>
-            <div class="screen-seven-items-element_title">адрес:</div>
-            <div class="screen-seven-items-element_value">невский проспект 140,<br>офис 140-142</div>
-          </div>
-          <div class="screen-seven-items-element">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
-              <path fill="#F7654A" d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.906-3.719-23.323-0.833-30.438,6.417l-43.177,32.594
-                  c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448
-                  c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.812C13.823,0,0,13.823,0,30.812
-                  C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z
-                   M362.667,353.188c0,5.229-4.25,9.479-9.479,9.479c-182.99,0-331.854-148.865-331.854-331.854c0-5.229,4.25-9.479,9.479-9.479
-                  h70.521c5.229,0,9.479,4.25,9.479,9.479c0,25.802,4.052,51.125,11.979,75.115c1.104,3.542,0.208,7.208-3.375,10.938L82.75,165.427
-                  c-2.458,3.26-2.844,7.625-1,11.26c29.927,58.823,66.292,95.188,125.531,125.542c3.604,1.885,8.021,1.49,11.292-0.979
-                  l49.677-37.635c2.51-2.51,6.271-3.406,9.667-2.25c24.156,7.979,49.479,12.021,75.271,12.021c5.229,0,9.479,4.25,9.479,9.479
-                  V353.188z"/>
-            </svg>
-            <div class="screen-seven-items-element_title">телефон:</div>
-            <div class="screen-seven-items-element_value">8 (812) 111-22-33<br>8 (812) 111-22-33</div>
-          </div>
-          <div class="screen-seven-items-element">
-            <svg height="512" viewBox="0 0 443.294 443.294" width="512" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#F7654A" d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z"/>
-              <path fill="#F7654A" d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z"/>
-            </svg>
-            <div class="screen-seven-items-element_title">время работы:</div>
-            <div class="screen-seven-items-element_value">пн-сб<br>10:00 - 20:00</div>
-          </div>
-          <div class="screen-seven-items-element">
-            <svg  height="512" viewBox="0 0 479.058 479.058" width="512" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#F7654A" d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"/>
-            </svg>
-            <div class="screen-seven-items-element_title">e-mail:</div>
-            <div class="screen-seven-items-element_value screen-seven-items-element_value--maroon">info@vip.ru</div>
-          </div>
-        </div>
-      </div>
-    </section>
-<!-- /End screen-seventh -->
-
-<!-- Start footer -->
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-text-company">© 2020 Строительная компания</div>
-        <div class="footer-text-developer">Разработано лучшей студей</div>
-      </div>
-    </footer>
-<!-- /End footer -->
-
-  </div>
-
-  <script src="scripts/main.js" as="module"></script>
+</div>
+  _
 </body>
 </html>
