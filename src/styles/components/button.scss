@@ -1,8 +1,18 @@
 .button { 
+    height: 40px;
     border: none;
-    padding: 14px 30px;
+    padding: 0px 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    align-self: center;
     cursor: pointer;
     transition: .3s;
     border-radius: 50px;
-    background-color: #fedc63;
+    background-color: #f3cc3d;
+    span {
+        font-family: 'Montserrat-Extra', sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+        white-space: nowrap;
+      }
 }

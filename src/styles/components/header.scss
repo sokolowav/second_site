@@ -14,12 +14,6 @@
   
   &__button {
     justify-self: right;
-        
-    a {
-      text-transform: uppercase;
-      font-weight: 800;
-      white-space: nowrap;
-    }
   }
   &__info {
     display: flex;
@@ -37,8 +31,9 @@
     &__big-text {
       text-transform: uppercase;
     }
+  }
 
-    .element {
+  .element {
       &__pic {
         height: 25px;
         width: 25px;
@@ -47,14 +42,14 @@
         position: relative;
         svg {
           position: absolute;
+          top: 50%;
           left: 50%;
-          top: 25%;
-          transform: translateX(-50%);
+          transform: translate(-50%,-50%);
         }
       }
       &__text {
         padding-left: 10px;
       }    
-    }
+      
   }
 }
