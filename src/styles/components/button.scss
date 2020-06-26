@@ -10,9 +10,16 @@
     border-radius: 50px;
     background-color: #f3cc3d;
     span {
-        font-family: 'Montserrat-Extra', sans-serif;
+        //font-family: 'Montserrat-Extra', sans-serif;
         text-transform: uppercase;
         font-weight: 900;
         white-space: nowrap;
       }
+    &--black {
+      background-color: #000000;
+      align-self: start;
+      span {
+        color: #ffffff;
+      }
+    }
 }

@@ -1,0 +1,26 @@
+.section-first {
+    background-color: $yellow;
+}
+
+.content-first {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 60px 0;
+    &_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-weight: 900;
+            line-height: 38px;
+        }
+        p {
+            padding: 27px 0;
+        }
+    }
+    &_pic img {
+        width: 500px;
+    }
+    
+}
+
