@@ -1,40 +1,42 @@
 .header {
 
-  &__wrapper {
+  &_wrapper {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
   }
 
-  &__logo {
+  &_logo {
     img {
       width: 60px;
       height: 60px;
     }
   }
   
-  &__button {
+  &_button {
+    margin-left: 5px;
+    margin-bottom: 10px;
     justify-self: right;
   }
-  &__info {
+  &_info {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .info {
-    &__element {
+    &_element {
      display: flex;
      align-items: center;
      justify-content: space-between;
      padding: 5px 15px;
     }
-    &__big-text {
+    &_big-text {
       text-transform: uppercase;
     }
   }
 
   .element {
-      &__pic {
+      &_pic {
         height: 25px;
         width: 25px;
         background-color: $yellow;
@@ -47,7 +49,7 @@
           transform: translate(-50%,-50%);
         }
       }
-      &__text {
+      &_text {
         padding-left: 10px;
       }    
       
