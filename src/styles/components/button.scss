@@ -4,13 +4,16 @@
     padding: 0px 15px;
     align-self: center;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
+        &:hover {
+            transform: scale(1.05);
+        }
     border-radius: 50px;
     background-color: #f3cc3d;
     span {
-        //font-family: 'Montserrat-Extra', sans-serif;
+        font-family: 'Montserrat-Extra', sans-serif;
         text-transform: uppercase;
-        font-weight: 900;
+        font-weight: 300;
         white-space: nowrap;
       }
     &--black {

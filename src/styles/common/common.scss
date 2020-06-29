@@ -17,7 +17,13 @@ body {
   line-height: 20px;
 }
 
+.section {
+  &-yellow {background-color: #f3cc3d;}
+  &-grey {background-color: $grey;}
+}
+
 a {
   text-decoration: underline;
-  color: blue;
+  color: #309dff;
+  display: inline !important;
 }
