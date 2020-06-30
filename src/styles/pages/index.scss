@@ -82,12 +82,76 @@
         display: grid;
         grid-template-columns: 60% 40%;
         gap: 25px;
-        padding-top: 70px;
+        padding: 70px 0;
+        &_input{
+            padding-right: 100px;
+        }
         h1 {
             font-weight: 900;
             line-height: 38px;
         }
-
+        &_form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 25px 0 10px;
+            span {
+                text-transform: uppercase;
+                font-size: 8px;
+                color: #717679;
+            }
+            input {
+                width: 100%;
+                height: 35px;
+            }
+            textarea {
+                width: 100%;
+                height: 160px;
+                resize: none;
+            }
+            p{
+                padding-top: 5px;
+            }
+            .input {
+                border-color: #717679;
+                border-width: 1px;
+                border-radius: 5px;
+                border-style: solid;
+                font-size: 13px;
+                padding-left: 10px;
+                box-sizing: border-box;
+                text-overflow:ellipsis;
+                &::-webkit-input-placeholder {
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                    color: #717679;
+                }
+                &::-moz-placeholder {
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                    color: #717679;
+                }
+                &:-moz-placeholder {
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                    color: #717679;
+                }
+                &:-ms-input-placeholder {
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                    color: #717679;
+                }
+                &:focus {
+                    &::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+                    &::-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+                    &:-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+                    &:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+                }
+            }
+            .large-box .input {
+                padding-top: 8px;
+            }
+        }
         &_contacts {
             p {
                 font-size: 13px;
@@ -100,6 +164,7 @@
         }
     }
 }
+
 
 .bar {
     display: grid;
@@ -123,4 +188,5 @@
             span { font-weight: 900;}
         }
     }
-  }
+}
+

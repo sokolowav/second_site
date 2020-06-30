@@ -1,7 +1,7 @@
 .button { 
     height: 40px;
     border: none;
-    padding: 0px 15px;
+    padding: 10px 20px;
     align-self: center;
     cursor: pointer;
     transition: 0.3s;
@@ -15,6 +15,7 @@
         text-transform: uppercase;
         font-weight: 300;
         white-space: nowrap;
+        font-size: 13px;
       }
     &--black {
       background-color: #000000;

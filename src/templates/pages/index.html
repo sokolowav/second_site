@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          <button class="button header_button">
+          <button class="button">
             <span>заказать звонок</span>
           </button>        
         </div>
@@ -180,16 +180,17 @@
         <div class="content-fifth">
           <div class="content-fifth_input">
             <h1>Оставьте заявку и мы<br> с вами свяжемся</h1>
-
-            <form class="content-fifth_form">
-              <p>как к вам обращаться?<br><input name="name" placeholder="Ваше имя" required ></p>
-              <p>номер телефона<br><input name="phone" placeholder="+7(XXX)XXX-XXXX" required></p>
-              <p>электронный адрес<br><input type="email" placeholder="e-mail"></p>
-              <p>что вас интересует?<br><textarea type="text" placeholder="Ваш вопрос"></textarea></textarea></p>
-              <!-- <p><input type="submit" class="button" value="ПЕРЕЗВОНИТЕ МНЕ"></p> -->
+            <form name="form" class="content-fifth_form" action="#">
+              <div class="little-box">
+                <p><span>как к вам обращаться?</span><br><input class="input" name="name" placeholder="Ваше имя" required ></p>
+                <p><span>номер телефона</span><br><input class="input" name="phone" placeholder="+7(XXX)XXX-XXXX" required></p>
+                <p><span>электронный адрес</span><br><input class="input" name="email" type="email" placeholder="e-mail"></p>
+              </div>
+              <div class="large-box">
+                <p><span>что вас интересует?</span><br><textarea class="input" name="question" type="text" placeholder="Ваш вопрос"></textarea></textarea></p>
+              </div>
             </form>
-            <button class="button"><span>перезвоните мне</span></button>
-
+            <button class="button" type="submit" form="form"><span>перезвоните мне</span></button>
           </div>
           <div class="content-fifth_contacts">
             <h1>Наши контакты</h1>
@@ -203,6 +204,14 @@
       </div>
     </section>
 <!-- End fifth section -->
+
+<!-- Start footer -->
+    <footer class="footer">
+      <div class="container">
+        <span>Сделано <a href="#">«Самой лучшей студией»</a></span>
+      </div>
+    </footer>
+<!-- End footer -->
 
   </div>
 </body>
