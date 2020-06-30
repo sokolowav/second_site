@@ -27,3 +27,11 @@ a {
   color: #309dff;
   display: inline !important;
 }
+
+.tel {
+  text-decoration: none;
+  color: #000000;
+  &__header {
+    color: #717679;
+  }
+}
