@@ -3,22 +3,24 @@
     &-first {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 60px 0;
+        padding: 45px 0 50px;
         column-gap: 25px;
         &_info {
             display: flex;
             flex-direction: column;
             justify-content: center;
             h1 {
+                padding-top: 45px;
                 font-weight: 900;
                 line-height: 38px;
             }
             p {
-                padding: 27px 0;
+                padding: 20px 0;
             }
         }
         &_pic img {
-            width: 120%;
+            width: 155%;
+            transform: translateX(-25%);
         }
     }
 
@@ -45,7 +47,7 @@
 
     &-third {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 0.6fr 0.4fr;
         padding: 60px 0;
         column-gap: 25px;
         &_info {
@@ -80,7 +82,7 @@
 
     &-fifth {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 0.6fr 0.4fr;
         gap: 25px;
         padding: 70px 0;
         &_input{
