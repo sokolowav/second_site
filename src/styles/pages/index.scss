@@ -1,10 +1,28 @@
 .content {
 
     &-first {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 45px 0 50px;
-        column-gap: 25px;
+        .invisible {
+            display: none;
+            @media screen and (max-width: 930px) {
+                display: block;
+                padding-top: 25px;
+                font-weight: 900;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+        &_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 45px 0 50px;
+            column-gap: 25px;
+            @media screen and (max-width: 930px) {
+                padding: 20px;
+            }
+            @media screen and (max-width: 580px) {
+                grid-template-columns: 1fr;
+            }
+        }
         &_info {
             display: flex;
             flex-direction: column;
@@ -13,15 +31,29 @@
                 padding-top: 45px;
                 font-weight: 900;
                 line-height: 38px;
+                @media screen and (max-width: 930px) {
+                    display: none;
+                }
             }
             p {
                 padding: 20px 0;
             }
         }
-        &_pic img {
-            width: 155%;
-            transform: translateX(-25%);
+        &_pic {
+            align-self: center;
+            img {
+                width: 155%;
+                transform: translateX(-25%);
+                @media screen and (max-width: 930px) {
+                    width: 130%;
+                    transform: translateX(-10%);
+                }
+                @media screen and (max-width: 580px) {
+                    display: none;
+                }
+            }
         }
+
     }
 
     &-second {
@@ -31,7 +63,11 @@
             font-size: 28px;
             font-weight: 300;
             text-transform: uppercase;
-            line-height: 38px;  
+            line-height: 38px;
+            @media screen and (max-width: 440px) {
+                font-size: 23px;
+                line-height: 33px;
+            }  
         }
         .padding-top {
             padding-top: 50px;
@@ -50,6 +86,9 @@
         grid-template-columns: 0.6fr 0.4fr;
         padding: 60px 0;
         column-gap: 25px;
+        @media screen and (max-width: 745px) {
+            grid-template-columns: 1fr;
+        }
         &_info {
             display: flex;
             flex-direction: column;
@@ -57,14 +96,22 @@
             h1 {
                 font-weight: 300;
                 text-transform: uppercase;
+                line-height: 33px;
             }
             p {
                 font-size: 13px;
                 padding: 20px 0 0 0;
             }
         }
-        &_pic img {
+        &_pic {
+            align-self: center;
+            @media screen and (max-width: 745px){
+                display: none;
+            }
+            img {
             width: 100%;
+            }
+            
         }        
     }
 
@@ -74,10 +121,6 @@
             font-weight: 300;
             color: #ffffff;
         }
-        .bar_foto {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
     }
 
     &-fifth {
@@ -85,8 +128,14 @@
         grid-template-columns: 0.6fr 0.4fr;
         gap: 25px;
         padding: 70px 0;
+        @media screen and (max-width: 830px) {
+            grid-template-columns: 1fr;
+         }
         &_input{
             padding-right: 100px;
+            @media screen and (max-width: 830px) {
+                padding-right: 0px;
+            }
         }
         h1 {
             font-weight: 900;
@@ -161,6 +210,7 @@
             }
             img {
                 width: 100%;
+                max-width: 390px;
                 padding-top: 20px;
             }
         }
@@ -172,7 +222,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px 30px;
-    padding-top: 25px; 
+    padding-top: 25px;
+    @media screen and (max-width: 800px) {
+       grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+     } 
     &_element{
         background-color: #ffffff;
         border-radius: 0 0 5px 5px;
@@ -191,4 +247,5 @@
         }
     }
 }
+
 
